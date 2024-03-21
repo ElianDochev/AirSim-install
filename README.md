@@ -24,7 +24,6 @@ This Readme is a guide on how to install and use the AirSim plugin for Unreal En
   - [Visual Studio 2022 installation guide](#visual-studio-2022-installation-guide)
   - [Installing AirSim](#installing-airsim)
 - [Launching the plugin in Unreal Engine](#launching-the-plugin-in-unreal-engine)
-- [Configuration of the plugin](#configuration-of-the-plugin)
 
 # Linux Ubuntu 20.04 installation guide
 
@@ -189,37 +188,37 @@ cp -f {/path/to/this/repo}/replace/setup.sh ./
 
 ## Installing AirSim
 
-### 7. Install AirSim
+### 1. Install AirSim
 
 #### Important: Make sure you only have Visual Studio 2022 installed and no other versions of Visual Studio because the installation will fail otherwise.
 
-#### 7.1 Clone the AirSim repo
+#### 1.1 Clone the AirSim repo
 
 ```powershell
 git clone https://github.com/CodexLabsLLC/Colosseum.git AirSim
 ```
 
-#### 7.2 Open Developer Command Prompt for Visual Studio 2022
+#### 1.2 Open Developer Command Prompt for Visual Studio 2022
 
 Press the windows key and type "Developer Command Prompt for Visual Studio 2022" and run it as administrator.
 
 Note: we are using the Developer Command Prompt for Visual Studio 2022 because it ensures that the correct windows sdk and .net sdk are used.
 
-#### 7.3 Navigate to the AirSim folder
+#### 1.3 Navigate to the AirSim folder
 
 ```powershell
 cd AirSim
 ```
 
-#### 7.4 Run the build script
+#### 1.4 Run the build script
 
 ```powershell
 build.cmd
 ```
 
-### 8. Copy the Unreal\Plugins folder to your Unreal Engine project.
+### 2. Copy the Unreal\Plugins folder to your Unreal Engine project.
 
-### 9. Udpate your .uproject file to contain the following lines:
+### 3. Udpate your .uproject file to contain the following lines:
 
 ```json
 {
@@ -238,7 +237,7 @@ build.cmd
 }
 ```
 
-### 10. ADD the following line to Config/DefaultGame.ini file:
+### 4. ADD the following line to Config/DefaultGame.ini file:
 
 ```ini
 ...
@@ -246,14 +245,14 @@ build.cmd
 +MapsToCook=(FilePath="/AirSim/AirSimAssets")
 ```
 
-### 11. Generate Visual Studio project files
+### 5. Generate Visual Studio project files
 
 #### right click on the .uproject file and select "Generate Visual Studio project files"
 
 Note: on windows 11 you must click on "show more options" to see the option.
 if you dont see the option restart your computer and try again.
 
-### 12. Open the project in Visual Studio 2022 and build the project.
+### 6. Open the project in Visual Studio 2022 and build the project.
 
 Select Debug Game Editor and Win64 and click on the green arrow to build the project(F5 also works).
 
